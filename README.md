@@ -13,7 +13,7 @@ In this project, we automate quantification of microglia.
 
 Say what the step will be
     
-    #### Run in the Terminal(earch in the mac/linux/windows) 
+    #### Run in the Terminal(search in the mac/linux/windows) 
 
     $ git clone https://github.com/danish2562022/Microglia_cell_detection.git
     $ cd Microglia_cell_detection
@@ -35,12 +35,12 @@ Directories and Models are defined in config.yaml
         faster-rnn_weights: "./Faster_RCNN_weights/model_final.pth"
         retinanet_weights: "./RetinaNet_weights/model_final.pth"
 
-Model_name: Name of the model
-            -- Write "FASTER-RCNN" for Faster-RCNN
-            -- Write "RETINA-NET" for RetinaNet
-Directory: Input_dir is the path of input images
-           Output_dir is the path of results(Detected images and excel sheet of quantification) 
-           
+-->Model_name: Name of the model<br />
+            -- Write "FASTER-RCNN" for Faster-RCNN<br />
+            -- Write "RETINA-NET" for RetinaNet<br /><br />
+-->Directory: Input_dir is the path of input images<br />
+              Output_dir is the path of results(Detected images and excel sheet of quantification) 
+            
 ## Running
 
 How to run the automated hyperparameter optimization pipeline(https://www.youtube.com/watch?v=kCfhfJxXOOA&ab_channel=Danish)
