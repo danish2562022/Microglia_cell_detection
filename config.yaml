@@ -1,0 +1,12 @@
+experiment_name: Microglia_object_detection
+Model_information:
+    Model_name: "FASTER-RCNN" 
+    Threshold: 0.5
+    NMS: 0.1
+    image_format: "tif"     
+Directory:
+    Input_dir: "./test_images"
+    Output_dir: "./results"
+Weights:
+    faster-rnn_weights: "./Faster_RCNN_weights/model_final.pth"
+    retinanet_weights: "./RetinaNet_weights/model_final.pth"
