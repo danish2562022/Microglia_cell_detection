@@ -49,6 +49,10 @@ How to run the automated hyperparameter optimization pipeline(https://www.youtub
     $ python inference.py
 
 
+## Output
+
+Excel sheet and detected images in the output_dir defined in config.yaml
+
 
 
 
