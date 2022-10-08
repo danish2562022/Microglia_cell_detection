@@ -13,73 +13,44 @@ In this project, we automate quantification of microglia.
 
 Say what the step will be
     
-    #### Open Terminal 
+    #### Run in the Terminal(earch in the mac/linux/windows) 
 
     $ git clone https://github.com/danish2562022/Microglia_cell_detection.git
-    $ cd Keras_tuner_hyperparameter_optimization
-    $ conda env create -f environment.yml
-    $ conda activate snakemake
-   
+    $ cd Microglia_cell_detection
+    $ pip install -r requirements.txt
+
+## Configuration file
+Directories and Models are defined in config.yaml
     
+    experiment_name: Microglia_object_detection
+    Model_information:
+        Model_name: "FASTER-RCNN" 
+        Threshold: 0.5
+        NMS: 0.1
+        image_format: "tif"     
+    Directory:
+        Input_dir: "./test_images"
+        Output_dir: "./results"
+    Weights:
+        faster-rnn_weights: "./Faster_RCNN_weights/model_final.pth"
+        retinanet_weights: "./RetinaNet_weights/model_final.pth"
 
-
-
+Model_name: Name of the model
+            -- Write "FASTER-RCNN" for Faster-RCNN
+            -- Write "RETINA-NET" for RetinaNet
+Directory: Input_dir is the path of input images
+           Output_dir is the path of results(Detected images and excel sheet of quantification) 
+           
 ## Running
 
 How to run the automated hyperparameter optimization pipeline(https://www.youtube.com/watch?v=kCfhfJxXOOA&ab_channel=Danish)
+    $ cd Microglia_cell_detection
+    $ python inference.py
 
 
-## Configuration file
-Hyperparameter search space is defined in config.yml
-    
-     experiment_name: keras_tuner_fully_connected_pipeline
-        input_files:
-            app: "hyperparameter_tuning_custom_training.py"
-            models: models/model_fc.py
-            dataset: datasets/data_loader_classification.py 
 
-        training_config:
-            epochs: 5
-            max_trials: 5    
-  
-    --> config_file['input_files']['models']: Path of model
 
-    --> config_file['training_config']['max_trials']:  Number of hyperparamter fonfiguration(search space)
 
-### Sample Tests
-
-     $ snakemake --cores "all"
-    
- Best model's hyperparameters get saved in best_model_params.txt
-### Sample Output
-    
-    $ cat best_model/config[experiment_name]/config[input_files][models]/best_params.txt
-    
-    {'num_layers': 1, 'units_1': 480, 'lr_1': 0.001096082336813933, 'activation_1': 'relu', 'dropout_1': False, 'batch_size': 64, 'lr': 0.0001}
-
-    Model: "sequential"
-    _________________________________________________________________
-     Layer (type)                Output Shape              Param #   
-    =================================================================
-     flatten (Flatten)           (None, 784)               0         
-
-     dense (Dense)               (None, 480)               376800    
-
-     dense_1 (Dense)             (None, 10)                4810      
-
-    =================================================================
-    Total params: 381,610
-    Trainable params: 381,610
-    Non-trainable params: 0
-    _________________________________________________________________
-    
-    
-   ### Load Best model
-   
-    import tensorflow as tf
-    from tensorflow import keras
-    best_model_path = os.path.join("best_model",config_file['experiment_name'],config_file['input_files']['models'].split("/")[1].split(".")[0])
-    model = keras.models.load_model(best_model_path)
 
 
 
