@@ -12,8 +12,9 @@ In this project, we automate quantification of microglia.
 
 
 Say what the step will be
+    Open Terminal 
 
-    $ git clone [https://github.com/danish2562022/Microglia_cell_detection.git](https://github.com/danish2562022/Microglia_cell_detection.git)
+    $ git clone https://github.com/danish2562022/Microglia_cell_detection.git
     $ cd Keras_tuner_hyperparameter_optimization
     $ conda env create -f environment.yml
     $ conda activate snakemake
