@@ -1,15 +1,11 @@
 
-# Microglia quantification
+# Microglia quantification 
 
-Performance of machine learning model depends on the configuration of hyperparameters. Finding the optimal hyperparameters (hypeparameter tuning), could be very time consuming and challenging.  
-
-In this project, we automate the hyperparameter optimization pipeline for classification and regression models.
+In this project, we automate quantification of microglia.
 
 
 
 ## Getting Started
-
-To know more about Keras Tuner, kindly refer official [docs](https://keras.io/api/keras_tuner/)
 
 
 ### Installing
@@ -17,7 +13,7 @@ To know more about Keras Tuner, kindly refer official [docs](https://keras.io/ap
 
 Say what the step will be
 
-    $ git clone [https://github.com/danish2562022/hyperparameter_optimization_pipeline.git](https://github.com/danish2562022/Keras_tuner_hyperparameter_optimization.git)
+    $ git clone [https://github.com/danish2562022/Microglia_cell_detection.git](https://github.com/danish2562022/Microglia_cell_detection.git)
     $ cd Keras_tuner_hyperparameter_optimization
     $ conda env create -f environment.yml
     $ conda activate snakemake
