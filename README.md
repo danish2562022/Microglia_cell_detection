@@ -43,7 +43,8 @@ Directories and Models are defined in config.yaml
             
 ## Running
 
-How to run the automated hyperparameter optimization pipeline(https://www.youtube.com/watch?v=kCfhfJxXOOA&ab_channel=Danish)
+How to run the automated hyperparameter optimization pipeline(https://www.youtube.com/watch?v=kCfhfJxXOOA&ab_channel=Danish)<br />
+
     $ cd Microglia_cell_detection
     $ python inference.py
 
